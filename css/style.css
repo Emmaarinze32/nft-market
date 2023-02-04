@@ -163,8 +163,6 @@ background: lightgoldenrodyellow;
 .trending-nfts {
     grid-column: 2 / span 2;
     grid-row: 2 / span 2;
-    display: flex;
-
     overflow: hidden;
 }
 
@@ -180,23 +178,50 @@ background: lightgoldenrodyellow;
 
 } */
 
-.trending-image-wrapper {
-    width: auto;
+.image-wrap {
+    width: 100vw;
     height: 100vh;
     position: relative;
 }
 
-.trending-image-wrapper ul {
+.buttons {
+    display: flex;
+}
+
+.buttons div:nth-of-type(1) {
+    margin-left: 1rem;
+    margin-right: 36rem;
+}
+
+.buttons div:nth-of-type() {
+    margin: none;
+}
+
+
+.fa-solid[data-switch-button] {
+    padding: 5px;
+    position: absolute;
+    background: rgb(10, 25, 10);
+    outline: 1px solid skyblue;
+    border: none;
+    top: 20%;
+    z-index: 2;
+    transform: translateY(50%);
+    cursor: pointer;
+    border-radius: 0.2rem;
+}
+
+.image-wrap[data-imageWrapper] ul {
     margin: none;
     padding: none;
     list-style: none;
 }
 
-.slide {
+ .slide {
     position: absolute;
     inset: 0;
     opacity: 0;
-}
+} 
 
 .slide > img {
     display: block;
@@ -210,35 +235,11 @@ background: lightgoldenrodyellow;
     opacity: 1;
 }
 
-.trending-nfts .fa-solid{
-    position: absolute;
-    background: none;
-    border: none;
-    top: 20%;
-    z-index: 2;
-    font-size: 2rem;
-    transform: translateY(-50%);
-    color: rgb(10, 10, 10);
-    cursor: pointer;
-    background-color: rgb(20, 30, 20);
-    border-radius: 2px;
-}
-
-.trending-nfts button :hover,
-.trending-nfts button :focus {
-    background-color: lightcoral;
+.fa-solid[data-switch-button]:hover {
+    background: lightcoral;
     color: white;
 }
-
-.trending-nfts .fa-solid {
-    outline: 1px solid skyblue;
-}
-
-.trending-nfts button .next-nft {
-    right: 1rem;
-}
-
-          /* TOP-NFTS  */
+           /* TOP-NFTS  */
 
 .top-nfts {
     grid-row: 2 / span 3;

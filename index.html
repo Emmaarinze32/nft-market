@@ -12,7 +12,6 @@
     <div id="container">
                                 <!--           HEADER SESSION          -->
 
-
         <section class="header">
             <div>
                <img src="images/image-favicon.png" alt="Nft-market website favicon"> 
@@ -49,10 +48,16 @@
         
         <section class="trending-nfts">
             <!-- <div><h2>trending</h2></div> -->
-            <div class="trending-image-wrapper">
-                <button class="prev-nft"><i class="fa-solid fa-arrow-left fa-2x"></i></button>
-                <button class="next-nft"><i class="fa-solid fa-arrow-right fa-2x"></i></button>
-            <ul>
+            <div class="image-wrap" data-imageWrapper>
+                <div class="buttons">
+                <div class="button-1">
+                <i class="fa-solid fa-arrow-left fa-2x" data-switch-button="prev"></i>
+                </div>
+                <div class="button-2">
+                <i class="fa-solid fa-arrow-right fa-2x" data-switch-button="next"></i>
+                </div>
+            </div>
+            <ul data-slide>
                 <li class="slide" data-active>
                     <img src="./images/trending.png" alt="Trending image">
                 </li>
@@ -97,6 +102,6 @@
 
         </section>
     </div>
-  <script src="app.js"></script>  
+     <script src="script.js" defer></script>
 </body>
 </html>
