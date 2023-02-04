@@ -1,0 +1,258 @@
+@import url('https://fonts.googleleapis.com/css?family=Ubuntu');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Ubuntu", "Sans-Serif";
+    margin: 0;
+    padding: 0;
+    /* align-items: center; 
+    height: 100vh;
+    overflow: hidden;
+   display: flex;
+   justify-content: center; */
+}
+
+/* GLOBAL */
+
+.fa-solid {
+    color: lightsalmon;
+}
+
+h2 {
+    background-image: url("../images/university-building.jpg");
+    text-align: center;
+    text-transform: capitalize;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+    animation: h2-background 6s 2s infinite;
+}
+
+/* END OF GLOBAL CSS/BEGINING OF THE PAGE */
+
+#container {
+    color: lightgoldenrodyellow;
+    background-color: lightgray;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 70px 1fr 1fr 1fr 40px;
+    gap: 10px;
+}
+
+#container section {
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+      /* HEADER SESSION */
+
+.header {
+    background-color: rgba(70, 80, 85, 100);
+    height: 78px;
+    border-bottom: 2px solid orangered;
+    grid-column: 1 / span 4;
+
+    display: flex;
+}
+
+/* SITE LOGO */
+
+.header img {
+height: 40px;
+width: 40px;
+border: 2px solid indigo;
+border-radius: 50px;
+}
+
+
+.header div:nth-of-type(1) {
+    align-self: center;
+    margin: 2px;
+}
+
+/* SITE NAME */
+
+.header div:nth-of-type(2) {
+    margin-right: 290px;
+    align-self: center;
+    color: orchid;
+    opacity: 70%;
+}
+
+
+.brand {
+    color: lightgoldenrodyellow;
+}
+
+.header div:nth-of-type(3) {
+background: lightgoldenrodyellow;
+    height: 40px;
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 20px;
+    align-self: center;
+    /* opacity: 30%; */
+    margin-right: 400px;
+}
+
+.fa-search {
+    color: black;
+    font-weight: bold;
+    opacity: 30%;
+    align-self: center;
+}
+
+#search-bar {
+    background: lightgoldenrodyellow;
+    color: pink;
+    width: 250px;
+    height: 38px;
+    align-self: center;
+    border-radius: 20px;
+    border: none;
+}
+/* THE STYLES BELOW ARE FOR THE USER, SHOPPING-CART AND BARS ICON LOCATED @ THE RIGHT HAND SIDE OF THE HEADER */
+
+.header div:nth-of-type(4),
+.header div:nth-of-type(5),
+.header div:nth-of-type(6) {
+    justify-self: end;
+    align-self: center;
+    margin-right: 10px;
+}
+
+
+     /* NEWLY MINTED NFTS */
+
+.newly-minted {
+    grid-row: 2 / span 2;
+
+    overflow: hidden;
+}
+
+
+@keyframes h2-background {
+    0%{background-image: url("../images/university-building.jpg");}
+    25%{background-image: url("../images/university-building-2.png");}
+    50%{background-image: url("../images/university-building-3.png");}
+    75%{background-image: url("../images/university-building.jpg");}
+    100%{background-image: url("../images/university-building-2.png");}
+
+}
+
+.newly-minted img {
+    display: block;
+    width: fit-content;
+    transition: 0.3s;
+}
+
+
+      /* TRENDING NFTS */
+
+.trending-nfts {
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 2;
+    display: flex;
+
+    overflow: hidden;
+}
+
+/* .trending-nfts h2 {
+    background-image: url("../images/university-building.jpg");
+    color: white;
+    text-transform: capitalize;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    padding: 5px;
+    animation: h2-background 6s 2s infinite;
+
+} */
+
+.trending-image-wrapper {
+    width: auto;
+    height: 100vh;
+    position: relative;
+}
+
+.trending-image-wrapper ul {
+    margin: none;
+    padding: none;
+    list-style: none;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+}
+
+.slide > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+} 
+
+.slide[data-active] {
+    opacity: 1;
+}
+
+.trending-nfts .fa-solid{
+    position: absolute;
+    background: none;
+    border: none;
+    top: 20%;
+    z-index: 2;
+    font-size: 2rem;
+    transform: translateY(-50%);
+    color: rgb(10, 10, 10);
+    cursor: pointer;
+    background-color: rgb(20, 30, 20);
+    border-radius: 2px;
+}
+
+.trending-nfts button :hover,
+.trending-nfts button :focus {
+    background-color: lightcoral;
+    color: white;
+}
+
+.trending-nfts .fa-solid {
+    outline: 1px solid skyblue;
+}
+
+.trending-nfts button .next-nft {
+    right: 1rem;
+}
+
+          /* TOP-NFTS  */
+
+.top-nfts {
+    grid-row: 2 / span 3;
+}
+
+        /* DETAILED AREA BEFORE THE FOOTER */
+
+
+.bottom-area {
+    grid-column: 1 / span 3;
+}
+
+        /* FOOTER AREA */
+
+.footer {
+    grid-column: 1 / span 4;
+}
